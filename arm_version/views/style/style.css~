@@ -1,0 +1,73 @@
+body{
+background-color:#046380;
+}
+h2,label{
+color:white;
+}
+a{
+color:#5EB6DD;
+}
+a:hover{
+color:#E70739;
+}
+.jumbotron{
+margin-top:100px;
+margin-left:auto;
+margin-right:auto;
+background-color:#5F8CA3;
+}
+
+.form1{
+    display:block;
+    width:50%;
+    margin:0 auto;
+}
+h2{
+text-align:center;
+}
+.modal-header, h4, .close {
+      background-color: #046380;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+.btn .btn-success .btn-block
+{
+background-color:#5F8CA3;
+}
+.modal-body{
+background-color:#5F8CA3;
+}
+.modal-footer{
+background-color:#046380;
+}
+.modal-content{
+data-backdrop:"static";
+data-keyboard:"false";
+}
+#center_div{
+margin:  auto;
+width:80%;
+}
+.modal-body{
+position:relative; 
+height: 250px;
+}
+#led {
+    
+    margin-left:35%;
+    margin-top:0.2%;
+}
+#second {
+    
+    margin-left:35%;
+    margin-top:0.2%;
+}
+#buzerr{
+   width:20%;
+   height:20%;
+}
+

@@ -1,0 +1,23 @@
+var Recaptcha = require('recaptcha');
+
+    var recaptcha = new Recaptcha({
+        secret: '6Lf6SgkTAAAAAKN-XgilH1tVk5hMDTQkLU_2sEvC',
+        verbose: true
+    });
+ 
+    var VerifCaptcha= function(req, res){
+        // get the user response (from reCAPTCHA) 
+        var userResponse = req.query['g-recaptcha-response'];
+ 
+        recaptcha.checkResponse(userResponse, function(error, response){
+            if(error){
+                
+                return false;
+            }
+ 
+            if(response.success){
+                
+           	return true;
+            }
+        });
+    };

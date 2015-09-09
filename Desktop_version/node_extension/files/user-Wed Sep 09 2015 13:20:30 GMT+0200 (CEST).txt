@@ -1,0 +1,14 @@
+******new user connected**************
+user: user connected at : Wed Sep 09 2015 13:20:30 GMT+0200 (CEST) 
+********state of peripherics***************
+led1 is ON
+********state of peripherics***************
+led1 is OFF
+********state of peripherics***************
+led2 is ON
+********state of peripherics***************
+led2 is OFF
+********state of peripherics***************
+led3 is ON
+********state of peripherics***************
+led3 is OFF

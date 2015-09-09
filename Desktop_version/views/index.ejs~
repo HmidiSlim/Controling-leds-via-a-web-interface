@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0" />
+	<title><%= title %></title>
+	
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+	
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+	<link rel="stylesheet" href="style/style.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	
+	
+	
+	
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="/">HomePage</a>
+    			</div>
+    		<div>
+      
+      		<ul class="nav navbar-nav navbar-right">
+        		<li><a href="#"><%= user.username%></a></li>
+        		<li><a href="/signout"><span class="glyphicon glyphicon-log-out"></span> Sign out</a></li>
+      			</ul>
+    		</div>
+  		</div>
+	</nav>
+	<div class="container">
+  		<div class="jumbotron">
+<div class="row">
+<div class="col-sm-6">
+<div class="container">
+  <h2>Led1</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default btn-lg" id="led1" align="center">check it</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="model_led1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal" id="close">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Settings</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            
+            <img src="style/images/led.png" id="led" class="img-responsive"/>
+              <button  type="button" class="btn btn-success btn-block" id="led1_activ"><span class="glyphicon glyphicon-off"></span> Activate</button>
+	      <button type="button" class="btn btn-success btn-block" id="led1_desactiv"><span class="glyphicon glyphicon-off"></span> Desactivate</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal" id="cancel_button"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+</div>
+<div class="col-sm-6">
+<div class="container">
+  <h2>Led2</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default btn-lg" id="led2" align="center">check it</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="model_led2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Settings</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            
+            <img src="style/images/led.png" id="second"/>
+
+              <button type="button" class="btn btn-success btn-block" id="led2_activ"><span class="glyphicon glyphicon-off"></span> Activate</button>
+	      <button type="button"  class="btn btn-success btn-block" id="led2_desactiv"><span class="glyphicon glyphicon-off"></span> Desactivate</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+</div>
+</div>
+ 
+<hr color="blue">
+
+
+<div class="row">
+<div class="col-sm-6">
+<div class="container">
+  <h2>Buzzer</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default btn-lg" id="buzzer1">check it</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="model_buzzer1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Settings</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            
+            <img src="style/images/buzer0.png" id="buzerr"/>
+              <button type="button" class="btn btn-success btn-block" id="buzzer_activ"><span class="glyphicon glyphicon-off"></span> Activate</button>
+	      <button type="button" class="btn btn-success btn-block" id="buzzer_desactiv"><span class="glyphicon glyphicon-off"></span> Desactivate</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+</div>
+
+
+
+
+<!-- show of the led1's Model -->
+<script>
+$(document).ready(function(){
+    $("#led1").click(function(){
+        $("#model_led1").modal({
+	backdrop: 'static',
+        keyboard: false});
+    });
+});
+</script>
+<!-- show of the led2's Model -->
+<script>
+$(document).ready(function(){
+    $("#led2").click(function(){
+        $("#model_led2").modal({
+	backdrop: 'static',
+        keyboard: false});
+    });
+});
+</script>
+<!-- show of the buzzer1's Model -->
+<script>
+$(document).ready(function(){
+    $("#buzzer1").click(function(){
+        $("#model_buzzer1").modal({
+	backdrop: 'static',
+        keyboard: false});
+    });
+});
+</script>
+
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  	var socket = io.connect();
+	var user1 = "<%= user.username%>";
+	socket.emit('new_user',user1);
+	
+</script>
+<!--send the state of the buzzer to the server-->
+<script>
+$("#buzzer_activ").click(function(){
+	
+	socket.emit('state1',"ON");
+        
+	
+        var y=document.getElementById("buzerr");
+        y.setAttribute("src", "style/images/buzer1.png");
+});
+$("#buzzer_desactiv").click(function(){
+	socket.emit('state1',"OFF");
+        
+        
+        var y=document.getElementById("buzerr");
+        y.setAttribute("src", "style/images/buzer2.png");
+});
+
+</script>
+<!--send the state of the LED1 to the server-->
+<script>
+$("#led1_activ").click(function(){
+	socket.emit('state2',"ON");
+        
+        
+        var x=document.getElementById("led");
+        x.setAttribute("src", "style/images/led_on.png");
+       
+
+});
+$("#led1_desactiv").click(function(){
+	socket.emit('state2',"OFF");
+        
+        
+	var x=document.getElementById("led");
+  	x.setAttribute("src", "style/images/led_off.png");
+});
+
+</script>
+<!--send the state of the LED2 to the server-->
+<script>
+$("#led2_activ").click(function(){
+	socket.emit('state3',"ON");
+         
+       
+        var y=document.getElementById("second");
+        y.setAttribute("src", "style/images/led_on.png");
+       
+
+});
+$("#led2_desactiv").click(function(){
+	socket.emit('state3',"OFF");
+         
+       
+	var y=document.getElementById("second");
+  	y.setAttribute("src", "style/images/led_off.png");
+});
+
+</script>
+
+</body>
+</html>

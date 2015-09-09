@@ -1,0 +1,21 @@
+{
+  "name": "web-interface",
+  "version": "1.0.0",
+  "author": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "bookshelf": "0.5",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "4.x",
+    "express-session": "*",
+    "mysql": "*",
+    "node-gyp": "^2.0.2",
+    "nodemon": "^1.4.0",
+    "passport": "*",
+    "passport-local": "*",
+    "socket.io": "^1.3.5"
+  }
+}
